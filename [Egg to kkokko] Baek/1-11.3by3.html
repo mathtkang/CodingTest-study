@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//세자리곱
+
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+let input = [];
+let count = 0;
+//현재어느위치에 있는지 줄
+rl.on('line', (line) => {
+    count++;
+    if(count <= 2) { //3자리수곱
+      input.push(Number(line));
+    }else {
+      rl.close();
+    }
+
+    for(let i=0; i<=2; i++){
+      input.push(Number(line));
+    }
+    rl.close();
+});
+
+rl.on('close', () => {
+    let A = input[0];
+    let B = input[1];
+    // hint : 나머지!
+    let firstNum = B % 10; //1의자리
+    let secondNum = (B % 100 - B % 10) / 10; //십의자리
+    let thirdNum = (B - B % 100) / 100; //백의자리
+
+    let result1 = firstNum * A;
+    let result2 = secondNum * A;
+    let result3 = thirdNum * A;
+
+    let result4 = result3 * 100 + result2 * 10 + result1;
+    
+    console.log(result1);
+    console.log(result2);
+    console.log(result3);
+    console.log(result4);
+});
+
+
+  </script>
+</body>
+</html>

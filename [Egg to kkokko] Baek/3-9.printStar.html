@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+// sol1)
+let input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
+let line = Number(input[0]);
+
+let answer = '';
+for (let i = 0; i < line; i++) {
+    answer += "*";
+    console.log(answer);
+}
+
+//sol2)
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+let input = [];
+
+rl.on('line', (line) => {
+  input.push(line);
+});
+
+rl.on('close', () => {
+  let line = Number(input[0]);
+  let answer = "";
+
+  for(let i = 0; i<line; i++){
+    answer += "*";
+    console.log(answer);
+  }
+
+  process.exit();
+});
+  </script>
+</body>
+</html>

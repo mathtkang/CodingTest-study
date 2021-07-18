@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //모듈가져옴
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+//input을 받는 값
+let input = [];
+
+rl.on('line', (line) => {
+  //input받는 배열 : line에 따라서 하나의 배열값으로 받겠다.
+  input.push(line);
+});
+
+rl.on('close', () => {
+
+  //sol1)
+  let count = Number(input[0]);//테스트케이스 갯수
+  let arr= []; //연산을 위한 새로운 배열 생성
+
+  for(let i=1; i<=count; i++){//갯수만큼 테스트케이스 배열 생성 후
+    arr.push(input[i].split(' '));
+    // [input[arr]]
+    //[5, [ [3,4], [5,6], [4,7], [5,8], [1,2] ] ]
+  }
+
+  for (let i = 0; i < count; i++) {
+    num1 = Number(arr[i][0]);
+    num2 = Number(arr[i][1]);
+
+    console.log(num1 + num2);
+  }
+
+  //sol2)
+  const count = input[0];
+  for (let i = 1; i <= count; i++) {
+    //또다른 배열에 .map이용해서 담는다.
+    const arr = input[i].split(' ').map(element => Number(element));
+    console.log(arr[0] + arr[1]);
+  }
+  
+  process.exit();
+});
+
+  </script>
+</body>
+</html>

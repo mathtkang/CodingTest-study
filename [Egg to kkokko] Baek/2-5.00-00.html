@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+// 알람시계 45분 당겨서
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+let input = [];
+
+rl.on('line', function(line){
+  let input = line.split(' ');
+  //(' ')를 기준으로 입력받은 값을 input배열안에 배열값으로 받겠다
+
+  let hour = Number(input[0]);
+  let min = Number(input[1]);
+
+  if(min>=45 && min<= 59){
+    min = min-45;
+  }else if(min >=0 && min<45){
+    min = min+45;
+    hour -= 1;
+    if(hour == -1){
+      hour = 23;
+    }
+  }
+  //출력물
+  console.log(hour + ' '+ min);
+})
+rl.on('close', function() {
+  process.exit();
+})
+
+
+  </script>
+</body>
+</html>
