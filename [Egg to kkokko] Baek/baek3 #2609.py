@@ -1,28 +1,36 @@
-# using namespace std
+import sys
+input = sys.stdin.readline
+a, b = map(int, input().split())
 
-int get_gcd(int a, int b) {
-    while(b != 0) {
-        int r = a % b
-        a = b
-        b = r
-    }
+# 최대공약수
+
+
+def gcd(a, b):
+    while b > 0:
+        a, b = b, a % b
+        # a = b
+        # b = a % b  # r
     return a
-}
 
-int get_lcm(int a, int b, int c){
-    return a*b/c
-}
+# 최소공배수
 
-int main() {
 
-    int a, b, gcd, lcm
+def lcm(a, b):
+    return a * b // gcd(a, b)
 
-    scanf("%d %d", & a, & b)
 
-    gcd = get_gcd(a, b)
-    lcm = get_lcm(a, b, gcd)
+print(gcd(a, b))
+print(lcm(a, b))
 
-    printf("%d\n%d\n", gcd, lcm)
 
-    return 0
-}
+###
+A, B = map(int, input().split())
+a, b = A, B
+while b != 0:
+    a = a % b
+    a, b = b, a
+
+# gcd
+print(a)
+# lcm
+print(A*B//a)
