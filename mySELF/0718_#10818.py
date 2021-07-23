@@ -1,4 +1,4 @@
-# 10818
+# 10818 : 1차원 배열 > 최소,최대
 
 # 입력받을 개수 정하기 -> 리스트의 개수 정하기
 # 입력받은 것들 중에서 최소와 최대를 각각 출력
@@ -6,7 +6,7 @@
 import sys
 input = sys.stdin.readline
 num = int(input())
-num_lst = list(map(int, input().split()))  # 요기를 다르게해야할듯
+num_lst = list(map(int, input().split()))
 
 # python 내장 함수 사용
 print(min(num_lst))

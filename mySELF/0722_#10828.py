@@ -1,4 +1,4 @@
-# 스택
+# 10828 : 스택
 
 import sys
 input = sys.stdin.readline
