@@ -14,5 +14,5 @@ lst = list(str(mul))
 print(lst)
 
 for i in range(10):  # i:0~9
-    cnt = lst.count(str(i))
+    cnt = lst.count(str(i))  # list.count(a) : list에 a라는 원소가 몇 개 인가?
     print(cnt)
