@@ -2,7 +2,6 @@
 # stack이용
 import math
 import heapq
-import stack
 import sys
 input = sys.stdin.readline
 
@@ -10,7 +9,7 @@ input = sys.stdin.readline
 num = int(input())
 
 arr = list(map(int, input().split()))
-stack = []
+stack = []  # 스택 : 클래스를 import하지 않고 배열로 직접 만듦
 ans = []
 
 for i in range(num):
@@ -20,13 +19,12 @@ for i in range(num):
             ans.append(0)
             break
         if stack[-1][1] >= arr[i]:
-            ans.append(stack[-1][0]+1)
+            ans.append(stack[-1][0] + 1)
             stack.append((i, arr[i]))
             break
         else:
             stack.pop()
 print(*ans)
-
 
 # heapq이용
 
