@@ -10,11 +10,11 @@ for _ in range(people):
     R = N % H  # 나머지 -> 층
 
     if R == 0:
-        Q = N//H
+        # Q = N//H
         R = H  # 맨 꼭대기 층 수
     else:
         Q = N//H+1
-        R = N % H
+        # R = N % H
     lst.append(R*100 + Q)
 
 for i in range(len(lst)):
