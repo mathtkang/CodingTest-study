@@ -14,9 +14,3 @@ for i in range(V):
     N -= B
 
 # 위와 같이 작성시 : 시간초과
-
-
-while 1:
-    N += 1
-    if N*A - (N-1)*B >= V:
-        print
