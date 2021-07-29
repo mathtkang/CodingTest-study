@@ -2,6 +2,7 @@
 # https://www.acmicpc.net/problem/2447
 
 
+import math
 import sys
 
 
@@ -66,3 +67,24 @@ def star(x, y, num):
 star(0, 0, num)
 for i in range(num):
     print(''.join(arr[i]))
+
+
+#####
+
+N = int(input())
+repeat = round(math.log(N, 3))
+
+arr = ['***', '* *', '***']
+idx = 1
+while idx < repeat:
+    length = len(arr)
+    for i in range(length):
+        arr.append(arr[i] + ' '*length + arr[i])
+
+    for i in range(length):
+        arr[i] *= 3
+        arr.append(arr[i])
+    idx += 1
+
+for i in arr:
+    print(i)
