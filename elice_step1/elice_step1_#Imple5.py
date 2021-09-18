@@ -28,23 +28,18 @@
 [문제풀이방식]
 각각을 if문으로 길게 작성할 수도 있지만, 
 '''
-N = int(input())  # 들어온 값
-cnt = 0  # 동전 개수
-lst = [500, 100, 50, 10, 5, 1]  # 거스름돈 종류
+N = int(input())  # 전체 단백질 양
+cnt = []  # 땅콩, 닭가슴살, 순수단백 의 큐브 갯수
+lst = [250, 40, 10]  # (큰수부터!!!) 땅콩, 닭가슴살, 순수단백 1개당 g
 
-for i in lst:
-    cnt += N//i
-    N %= i  # 나머지
+for g in lst:
+    if N < g:
+        cnt.append(0)
+        continue  # 이번 i에서는 for문 안에 있는 조건들을 실행하지 않고 넘어감
+    cnt.append(N//g)  # 리스트 값으로 몫을 넣는다
+    N %= g  # 나머지
 
-print(cnt)
-
-
-money = 1000 - int(input())
-yen = [500, 100, 50, 10, 5, 1]
-cnt = 0
-for y in yen:
-    if money < y:
-        continue
-    cnt += money//y
-    money -= money//y * y
-print(cnt)
+if N == 0:
+    print(cnt[2], cnt[1], cnt[0])  # 땅콩, 닭가슴살, 순수단백 순으로 출력
+else:
+    print("-1")
