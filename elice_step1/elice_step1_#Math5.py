@@ -8,5 +8,10 @@
 
 두개의 숫자가 주어지고
 각각의 숫자를 뒤집은 다음, 합해준다
-
 '''
+a, b = map(str, input().split())
+
+# print(a[::-1])
+# print(b[::-1])
+
+print(int(a[::-1]) + int(b[::-1]))
