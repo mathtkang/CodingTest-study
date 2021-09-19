@@ -7,13 +7,16 @@ num = math.pow(2,N)
 num을 각각 한자리 씩 더해준다
 '''
 import sys
-import math
-input = sys.stdin.readline
 
 N = int(input())
-num = math.pow(2, N)
+num = pow(2, N)  # 여기서는 math.pow(는 float형)가 아니라 내장함수 pow를 사용
 
 lst = []
 for i in str(num):
-    lst.append(i)
-    print(i)
+    lst.append(int(i))
+
+sum_ = 0
+for i in lst:
+    sum_ += i
+
+print(sum_)
