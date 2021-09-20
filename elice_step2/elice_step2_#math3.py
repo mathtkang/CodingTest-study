@@ -52,3 +52,6 @@ for i in range(1, N//2+1):
         lst_.append(pow_)
 
 print(len(lst_))
+
+# sol3) 제곱근을 이용해서 -> 주어진 수의 제곱근의 갯수
+# print(int(N**0.5))
