@@ -1,3 +1,7 @@
+# 수 정렬하기 2
+# https://www.acmicpc.net/problem/2751
+
+
 def merge_sort(array):
     if len(array) <= 1:
         return array
