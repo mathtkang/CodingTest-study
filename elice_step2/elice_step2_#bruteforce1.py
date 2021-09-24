@@ -1,14 +1,29 @@
-# [greedy] 잔돈 가득한 세상
 '''
 
 '''
+
 N = int(input())
-exchange = 10000-N
+lst = list(map(int, str(input())))
 
-result = 0
-for i in range(4, -1, -1):
-    val = exchange // pow(10, i)
-    result += val
-    exchange -= val*pow(10, i)
+red = []
+blue = []
+yellow = []
 
-print(result)
+# red : 5432154321
+
+
+# blue : 1234512345
+for i in range(len(lst)):
+    if i == 5:
+        i = 1
+    blue.append(i+1)
+
+
+# red = blue.reversed()
+
+for i in range(len(lst)):
+    yellow.append(3)
+
+print(red)
+print(blue)
+print(yellow)
