@@ -33,3 +33,28 @@ if not lst:
     print(0)
 else:
     print(min(lst))
+
+
+# 상현
+N = int(input())
+
+for creator in range(N):
+    temp = sum(map(int, str(creator)))  # sum으로 바로 묶어줌
+    totalSum = creator + temp
+    if totalSum == N:
+        print(creator)
+        break
+else:
+    print(0)
+
+
+# 예주
+n = int(input())
+answer = 0
+for i in range(1, n+1, 1):
+    num = list(map(int, str(i)))  # 하나씩 나눠서 리스트에 넣기
+    sum_num = sum(num) + i
+    if sum_num == n:
+        answer = i
+        break
+print(answer)
