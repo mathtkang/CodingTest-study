@@ -6,15 +6,39 @@
 입력된 번호를 index로 보고 해당하는 리스트값(n번째 영화 제목)을 출력
 '''
 import sys
+input = sys.stdin.readline
 sys.stdin = open("input.txt")
 
 idx = int(input())
 movie_name = [0]
 
-for num in range(666, 10001):
+for num in range(666, int(sys.maxsize)):
     if "666" in str(num):
         movie_name.append(num)
 
 print(movie_name)
-
 print(movie_name[idx])
+
+
+# # while
+# deathNum = 665
+# temp = 665
+# for _ in range(N):
+#     deathNum += 1
+#     while deathNum > 1:
+#         temp += 1
+#     if "666" in str(temp):
+#         deathNum = temp
+#         break
+# print(deathNum)
+
+
+# N = int(input())
+# movie = 666
+
+# while N:
+#     if "666" in str(movie):
+#         N -= 1
+#     movie += 1
+
+# print(movie - 1)
