@@ -15,25 +15,30 @@ rank_list 로 비교하면 될 것 같은데!
 '''
 import sys
 sys.stdin = open("input.txt")
+# input = sys.stdin.readline
 
+# sol1)
 N = int(input())
 arr2 = [list(map(int, input().split())) for _ in range(N)]
-cnt_list = [0 for _ in range(N)]
-# rank_list = [0 for _ in range(N)]
-max_num = 0
+cnt_list = [1 for _ in range(N)]
 
 for i in range(N):
     for j in range(N):
-        if arr2[i][0] > arr2[j][0] and arr2[i][1] > arr2[j][1]:
+        if arr2[i][0] < arr2[j][0] and arr2[i][1] < arr2[j][1]:
             # print(arr2[i][0], arr2[i][1])
             cnt_list[i] += 1
 
+print(*cnt_list)  # list  ->string
 
-max_num = max(cnt_list)
-for i in range(N):
-    if cnt_list[i] < max_num:
-        max_num -= cnt_list[i]
-        cnt_list[i] += 1
+# sol2)
+# people = []
+# for i in range(n):
+#     people.append(input().split())
 
 
-print(cnt_list)
+# for i in range(n):
+#     grade = 1
+#     for j in range(n):
+#         if people[i][0] < people[j][0] and people[i][1] < people[j][1]:
+#             grade += 1
+#     print(grade, end=" ")  # 배열로 안하고 하나씩 출력해줌
