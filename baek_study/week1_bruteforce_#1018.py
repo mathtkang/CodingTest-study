@@ -4,5 +4,3 @@
 [문제 접근 방식]
 
 '''
-import sys
-sys.stdin = open("input.txt")
