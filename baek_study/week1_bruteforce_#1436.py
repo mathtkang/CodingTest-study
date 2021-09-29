@@ -11,10 +11,13 @@ sys.stdin = open("input.txt")
 
 idx = int(input())
 movie_name = [0]
+six_num = 666
+for _ in range(idx):
 
-for num in range(666, int(sys.maxsize)):
-    if "666" in str(num):
-        movie_name.append(num)
+    for num in range(666, int(sys.maxsize)):
+        if "666" in str(num):
+            movie_name.append(num)
+            break
 
 print(movie_name)
 print(movie_name[idx])
