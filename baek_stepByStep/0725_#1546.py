@@ -1,4 +1,5 @@
-# 평균
+# 평균 (성공)
+# https://www.acmicpc.net/problem/1546
 import sys
 input = sys.stdin.readline
 

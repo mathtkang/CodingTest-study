@@ -1,4 +1,5 @@
-# 나머지
+# 나머지 (성공)
+# https://www.acmicpc.net/problem/3052
 import sys
 input = sys.stdin.readline
 

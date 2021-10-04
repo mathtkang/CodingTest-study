@@ -1,4 +1,5 @@
-# 숫자의 개수
+# 숫자의 개수 (성공)
+# https://www.acmicpc.net/problem/2577
 
 import sys
 input = sys.stdin.readline
