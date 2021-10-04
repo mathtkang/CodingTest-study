@@ -1,20 +1,11 @@
-# 최댓값
-
+# 최댓값 (성공)
+# https://www.acmicpc.net/problem/2562
 import sys
+sys.stdin = open("input.txt")
 input = sys.stdin.readline
-
 num_lst = []
-
 for i in range(9):
-    num_lst.appned(int(input()))
+    num_lst.append(int(input()))
 
-# max함수 구현하면 런타임에러남
-max = num_lst[0]
-for i in num_lst:
-    if max < i:
-        max = i
-
-# print(max)
-# print(num_lst.index(max)+1)
-print(max(num_list))
+print(max(num_lst))
 print(num_lst.index(max(num_lst))+1)
