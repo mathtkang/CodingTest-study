@@ -1,14 +1,15 @@
-# 회의실 배정
+# 회의실 배정 (why??????)
 # https://www.acmicpc.net/problem/1931
 '''
 [문제 이해]
-
+하나의 회의실만 사용 가능한데, 최대한 많은 회의가 이루어질 수 있도록
 
 [힌트]
 (1,4), (5,7), (8,11), (12,14) 를 이용할 수 있다. => 튜플형태
+
 [문제 접근 방식]
 리스트와 튜플 형식으로 저장
-시작숫자중 가장 작은 숫자~
+회의시간이 짧은 것, 
 '''
 import sys
 sys.stdin = open("input.txt")
@@ -17,25 +18,24 @@ input = sys.stdin.readline
 N = int(input())
 lst = []
 for _ in range(N):
-    tuple_ = tuple(map(int, input().split()))
-    lst.append(tuple_)
-lst.sort()
+    list_ = list(map(int, input().split()))
+    lst.append(list_)
+    # 같은 말
+    # f, s = map(int, input().split())
+    # lst.append([f, s])
+# 끝나는 시간 x[1] 오름차순 정렬 -> 시작시간 x[0] 오름차순 정렬
 print(lst)
+lst.sort(key=lambda x: (x[1], x[0]))
 
+cnt = 1
+# print(lst)
 
-# start = []
-# for i in range(len(lst)):
-#     start.append(lst[i][0])
+end_num = lst[0][1]
 
-# print(start)
-# idx = start.index(min(start))
-# print(lst[idx][1])
-# start.sort()
-# print(start)
-# # [0, 1, 2, 3, 3, 5, 5, 6, 8, 8, 12]
-# for i in start:
-#     if lst[idx][1] <= i:
-
-#         # while(True):
-#         #     if len(lst) == 0:
-#         #         break
+for i in range(len(lst)):
+    if end_num <= lst[i][0]:
+        end_num = lst[i][1]
+        # print(start_num)
+        # print(end_num)
+        cnt += 1
+print(cnt)
