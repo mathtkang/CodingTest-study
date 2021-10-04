@@ -1,4 +1,5 @@
-# 1110
+# 1110 (성공)
+# https://www.acmicpc.net/problem/1110
 num = []
 first_num = int(input())
 input_ = first_num
