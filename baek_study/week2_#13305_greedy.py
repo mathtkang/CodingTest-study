@@ -1,4 +1,4 @@
-# 주유소
+# 주유소 (what?)
 # https://www.acmicpc.net/problem/13305
 '''
 [문제 이해]
