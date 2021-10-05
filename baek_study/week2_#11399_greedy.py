@@ -1,4 +1,4 @@
-# ATM
+# ATM (성공)
 # https://www.acmicpc.net/problem/11399
 '''
 [문제 접근 방식]
