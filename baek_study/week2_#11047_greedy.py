@@ -1,4 +1,4 @@
-# 동전 0
+# 동전 0 (성공)
 # https://www.acmicpc.net/problem/11047
 import sys
 sys.stdin = open("input.txt")
