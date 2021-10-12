@@ -1,4 +1,4 @@
-# 회의실 배정 (why??????)
+# 회의실 배정 (왜 틀린지 모르겠음)
 # https://www.acmicpc.net/problem/1931
 '''
 [문제 이해]
@@ -25,17 +25,22 @@ for _ in range(N):
     # lst.append([f, s])
 # 끝나는 시간 x[1] 오름차순 정렬 -> 시작시간 x[0] 오름차순 정렬
 print(lst)
+
 lst.sort(key=lambda x: (x[1], x[0]))
+# # 시작 시간을 기준으로 정렬 후
+# lst = sorted(lst, key = lambda x: x[0])
+# # 끝나는 시간을 기준으로 정렬
+# lst = sorted(lst, key = lambda x: x[1])
 
 cnt = 1
-# print(lst)
+print(lst)
 
 end_num = lst[0][1]
 
-for i in range(len(lst)):
+for i in range(1, len(lst)):
     if end_num <= lst[i][0]:
         end_num = lst[i][1]
-        # print(start_num)
-        # print(end_num)
+        print(end_num)
         cnt += 1
+
 print(cnt)
