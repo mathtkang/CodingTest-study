@@ -1,4 +1,4 @@
-# 잃어버린 괄호
+# 잃어버린 괄호 (다시)
 # https://www.acmicpc.net/problem/1541
 '''
 [문제 이해]
@@ -14,37 +14,61 @@
 import sys
 sys.stdin = open("input.txt")
 input = sys.stdin.readline
-# input()으로 받는 값의 첫번째 요소가 +,-인지 확인 후 아래의 로직 실행
-input_string = str(input())
-print(input_string)
+
+lst = input().split("-")
+
+sum_ = 0
+in_sum = 0
+
+for i in lst:
+    if "+" in i:
+        lst2 = []
+        lst2 = i.split("+")
+        lst2 = [int(j) for j in lst2]
+        in_sum += sum(lst2)
+    else:
+        sum_ += int(i)
+
+sum_ -= in_sum
+print(sum_)
 
 
-if input_string[0] == "-":  # 만약 -로 시작하면
-    sum_
-    pass
+# 예주
+arr = input().split("-")
+# print(arr)
+
+numbers = []
+
+# 각 요소에 +가 있는거 더해주기
+for i in arr:
+
+    num = i.split("+")  # 덧셈을 해야하는 리스트를 따로 만듬
+#     print(num)
+    temp = 0
+    for j in num:
+        temp += int(j)
+    numbers.append(temp)  # 덧셈을 한 요소를 새로운 리스트에 저장 # 여기있는 요소들을 빼주면 ㅇㅋㅇㅋ
 
 
-def func(input_, sum_):
-    lst = list(map(str, input_.split("-")))
-    lst.insert(0, '0')
-    print(lst)
+answer = 0
+# print(numbers)
+for i in range(len(numbers)):
+    if i == 0:
+        answer += numbers[i]
+    else:
+        answer -= numbers[i]
 
-    sum_ = 0
-    in_sum = 0
-    for i in lst:  # ['55', '50+40', '30+20']
-        if "+" in i:
-            lst2 = []
-            lst2 = i.split("+")  # ['50', '40']
-            # lst2 = list(map(int, lst2))
-            # 리스트 내부 요소 형변환 string->int # [50, 40]
-            lst2 = [int(j) for j in lst2]
-            print(lst2)
-            print(sum(lst2))  # 90
-            in_sum += sum(lst2)
-            print(in_sum)
-        else:
-            sum_ += int(i)
+print(answer)
 
-            # print(in_sum)
-    sum_ -= in_sum
-    print(sum_)
+
+# 상현
+expression = input().split("-")
+ans = 0
+for i in expression[0].split("+"):
+    ans += int(i)
+
+for i in expression[1:]:
+    for j in i.split("+"):
+        ans -= int(j)
+
+print(ans)
