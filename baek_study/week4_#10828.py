@@ -1,4 +1,4 @@
-# 스택
+# 스택 (성공)
 # https://www.acmicpc.net/problem/10828
 '''
 [문제 접근 방식]
