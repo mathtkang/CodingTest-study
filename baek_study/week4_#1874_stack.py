@@ -1,4 +1,4 @@
-# 스택 수열
+# 스택 수열 (다시)
 # https://www.acmicpc.net/problem/1874
 '''
 [문제 이해]

@@ -1,4 +1,4 @@
-# 덩치
+# 덩치 (완료)
 # https://www.acmicpc.net/problem/7568
 '''
 [문제 접근 방식]

@@ -1,4 +1,4 @@
-# 괄호
+# 괄호 (성공)
 # https://www.acmicpc.net/problem/9012
 '''
 [문제 이해]

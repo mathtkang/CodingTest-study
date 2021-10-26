@@ -1,4 +1,4 @@
-# 주유소 (what?)
+# 주유소 (다시)
 # https://www.acmicpc.net/problem/13305
 '''
 [문제 이해]
@@ -14,6 +14,7 @@ L과 W의 리스트 갯수는 W가 하나 더 많다
 L과 W의 순서를 바꿔준다.
 
 셋째줄의 마을에서 채울 수 있는 기름의 리터들을 비교해서 
+
 '''
 
 # 왼쪽 도시에서 오른쪽 도시로 가는 최소 비용 출력
@@ -26,6 +27,7 @@ L과 W의 순서를 바꿔준다.
 
 import sys
 sys.stdin = open("input.txt")
+
 input = sys.stdin.readline
 N = int(input())
 L = list(map(int, input().split()))
@@ -86,7 +88,7 @@ for i in range(0, len(price)-1):
 print(answer)
 
 
-# 상현
+# another
 
 N = int(sys.stdin.readline())
 length = list(map(int, sys.stdin.readline().split()))

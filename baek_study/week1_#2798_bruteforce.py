@@ -1,4 +1,4 @@
-# 블랙잭
+# 블랙잭 (성공)
 # https://www.acmicpc.net/problem/2798
 '''
 [문제 접근 방식]

@@ -1,4 +1,4 @@
-# 영화감독 숌
+# 영화감독 숌 (다시)
 # https://www.acmicpc.net/problem/1436
 '''
 [문제 접근 방식]

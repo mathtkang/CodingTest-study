@@ -1,4 +1,4 @@
-# 큐 2
+# 큐 2 (다시)
 # https://www.acmicpc.net/problem/18258
 '''
 [문제 이해]

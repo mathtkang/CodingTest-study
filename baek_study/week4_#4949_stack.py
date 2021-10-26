@@ -1,4 +1,4 @@
-# 균형잡힌 세상
+# 균형잡힌 세상 (성공)
 # https://www.acmicpc.net/problem/4949
 '''
 [문제 이해]

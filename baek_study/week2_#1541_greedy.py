@@ -47,7 +47,7 @@ for i in arr:
     temp = 0
     for j in num:
         temp += int(j)
-    numbers.append(temp)  # 덧셈을 한 요소를 새로운 리스트에 저장 # 여기있는 요소들을 빼주면 ㅇㅋㅇㅋ
+    numbers.append(temp)  # 덧셈을 한 요소를 새로운 리스트에 저장 # 여기있는 요소들을 빼주면 됨
 
 
 answer = 0
