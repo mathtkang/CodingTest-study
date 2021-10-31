@@ -26,14 +26,15 @@ def solution(new_id):
 def solution(new_id):
     # 1단계
     new_id = new_id.lower()
-    # 2단계
-    # for i in new_id:
-    #     if i == '-' or i == '_' or i == '.':
-    #         continue
-    #     else:
-    #         new_id = new_id.replace(i, '')
+    # 2단계 -sol1
+    for i in new_id:
+        if i == '-' or i == '_' or i == '.':
+            continue
+        else:
+            new_id = new_id.replace(i, '')
     # 이렇게 하면 틀리는 이유..?
 
+    # 2단계 -sol2
     answer = ''
     for i in new_id:
         # .isalnum() : 문자열이 영어, 한글 혹은 숫자로 되어있으면 참 리턴, 아니면 거짓 리턴.
@@ -56,8 +57,8 @@ def solution(new_id):
     if len(new_id) >= 16:
         new_id = new_id[:15]
         if new_id[-1] == '.':
-            new_id = new_id[:-1]
-            # new_id.rstrip('.') #왜 이건 안되징
+            new_id = new_id[:-1]  # 마지막 오른쪽 '.'를 없애기
+            # new_id = new_id.rstrip('.') #왜 이건 안되징
 
     # 7단계
     while len(new_id) <= 2:
