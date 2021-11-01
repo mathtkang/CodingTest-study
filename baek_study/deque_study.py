@@ -11,7 +11,7 @@ deque는 스택과 큐의 기능을 모두 가진 객체
 .extend(array): 주어진 배열(array)을 순환하면서 데크의 오른쪽에 추가
 '''
 deq = deque()
-# 이렇게 선언해주면 deq라는
+# 이렇게 선언해주면 deq 생성
 
 
 a = deque([i for i in range(10)])  # deque([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
