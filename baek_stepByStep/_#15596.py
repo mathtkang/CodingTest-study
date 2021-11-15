@@ -1,10 +1,5 @@
-# 정수 N개의 합
+# 정수 N개의 합 (성공)
 # https://www.acmicpc.net/problem/15596
-'''
-[문제 접근 방식]
-
-'''
-
 
 def solve(a):
     # sol1) sum함수 이용
