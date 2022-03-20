@@ -1,9 +1,9 @@
 # 주사위 세개
 # https://www.acmicpc.net/problem/2480
-'''
-[문제 접근 방식]
-'''
+
 a, b, c = map(int, input().split())
+
+# nogada
 result = 0
 
 if a == b and b == c:
@@ -23,4 +23,20 @@ elif a == c and b != c:
     result += a*100
 
 else:
+    max_ = 0
     if a > b and a > c:
+        max_ = a
+    elif b > c:
+        max_ = b
+    else:
+        max_ = c
+    result += max_*100
+
+print(result)
+
+# short solution
+if a == b == c:
+    print(10000+a*1000)
+elif a == b:
+    print(1000+a*100)
+elif
